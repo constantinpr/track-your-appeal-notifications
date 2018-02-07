@@ -121,7 +121,7 @@ services:
       - ccd-data-store-database-data:/var/lib/postgresql/data
 
   idam-api:
-    image: docker.artifactory.reform.hmcts.net/auth/idam-api:1581cd5b438ea6d8202cc635c6b75161239dddb9
+    image: docker.artifactory.reform.hmcts.net/auth/idam-api:latest
     healthcheck:
       interval: 10s
       timeout: 10s
@@ -158,7 +158,7 @@ services:
       - idam-database
       - smtp-server
   idam-database:
-    image: docker.artifactory.reform.hmcts.net/auth/idam-database:186a1e2b1508635fd7bec52dbbb6a45200ef8d4f
+    image: docker.artifactory.reform.hmcts.net/auth/idam-database:latest
     ports:
       - 5501:5432
     volumes:
